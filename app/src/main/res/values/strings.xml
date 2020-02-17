@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Safaud 2.0</string>
+    <string name="password"> Password</string>
+    <string name="todo">TODO</string>
+    <string name="email"> Email</string>
+    <string name="signin_email">로그인 및 이메일 등록하기</string>
+    <string name="google_login">구글 로그인 </string>
+    <string name="home">홈</string>
+    <string name="sleep_test">수면검사</string>
+    <string name="induced_sleep">수면유도</string>
+    <string name="statistics">통계</string>
+</resources>
