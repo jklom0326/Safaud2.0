@@ -9,4 +9,7 @@
     <string name="sleep_test">수면검사</string>
     <string name="induced_sleep">수면유도</string>
     <string name="statistics">통계</string>
+    <string name="daily">일간</string>
+    <string name="weekly">주간</string>
+    <string name="monthly">월간</string>
 </resources>
