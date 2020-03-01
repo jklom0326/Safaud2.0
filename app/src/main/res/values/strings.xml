@@ -12,4 +12,10 @@
     <string name="daily">일간</string>
     <string name="weekly">주간</string>
     <string name="monthly">월간</string>
+    <string name="day">일</string>
+    <string name="count_0">0</string>
+    <string name="mysleep">나의 수면</string>
+    <string name="time">시간</string>
+    <string name="sleep_times">수면유도</string>
+    <string name="awake_times">기상유도</string>
 </resources>

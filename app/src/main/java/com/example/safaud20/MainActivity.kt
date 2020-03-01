@@ -12,12 +12,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener{
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        bottom_navigation.setOnNavigationItemSelectedListener(this)
-    }
-
     override fun onNavigationItemSelected(p0: MenuItem): Boolean {
     when(p0.itemId){
         R.id.home ->{
@@ -43,4 +37,13 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     }
         return false
     }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        bottom_navigation.setOnNavigationItemSelectedListener(this)
+
+        //디폴트 화면 띄우는거
+        bottom_navigation.selectedItemId = R.id.home
+    }
+
 }
