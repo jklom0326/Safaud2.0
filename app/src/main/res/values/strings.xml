@@ -18,4 +18,7 @@
     <string name="time">시간</string>
     <string name="sleep_times">수면유도</string>
     <string name="awake_times">기상유도</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
