@@ -23,13 +23,6 @@ class AlarmMakeActivity : AppCompatActivity() {
         tvw = findViewById(R.id.textView1)
         picker=findViewById(R.id.timePicker1)
         btnGet = findViewById(R.id.button1)
-    button1.setOnClickListener() {
-        var hour = null
-        var minute = null
-        var am_pm: String? = null
-
-
-    }
 
         val mPickTimeBtn = findViewById<Button>(R.id.button1)
         val textView     = findViewById<TextView>(R.id.textView1)
