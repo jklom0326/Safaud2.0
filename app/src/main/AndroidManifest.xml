@@ -25,7 +25,7 @@
         <activity android:name=".AlarmMakeActivity" />
 
         <receiver
-                android:name=".DeviceBootReceiver"
+                android:name=".receiver.DeviceBootReceiver"
                 android:enabled="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -33,7 +33,7 @@
         </receiver>
 
         <receiver
-                android:name=".AlarmReceiver"
+                android:name=".receiver.AlarmReceiver"
                 android:enabled="true"
                 android:exported="true">
 

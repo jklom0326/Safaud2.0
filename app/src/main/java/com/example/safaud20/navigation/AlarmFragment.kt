@@ -6,13 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TimePicker
 import androidx.fragment.app.Fragment
 import com.example.safaud20.AlarmMakeActivity
 import com.example.safaud20.R
+import kotlinx.android.synthetic.main.activity_alarm_make.*
 import kotlinx.android.synthetic.main.fragment_alarm.*
 import kotlinx.android.synthetic.main.fragment_alarm.add_alram
 
 class AlarmFragment : Fragment() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

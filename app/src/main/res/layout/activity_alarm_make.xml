@@ -20,16 +20,16 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/timePicker1"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="160dp"
-            android:text="Get Date" />
+            android:layout_marginStart="160dp"
+            android:text="@string/get_date" />
     <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/button1"
-            android:layout_marginLeft="120dp"
+            android:layout_marginStart="120dp"
             android:layout_marginTop="10dp"
             android:textStyle="bold"
-            android:textSize="18dp"/>
+            android:textSize="18sp"/>
 
 </RelativeLayout>
