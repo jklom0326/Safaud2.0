@@ -1,6 +1,5 @@
 package com.example.safaud20.receiver
 
-import android.R
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -36,21 +35,15 @@ class AlarmReceiver : BroadcastReceiver() {
         val builder: Notification.Builder = Notification.Builder(context, "default")
 
 
-        //OREO API 26 이상에서는 채널 필요
-
-
-        //OREO API 26 이상에서는 채널 필요
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            //builder.setSmallIcon(R.drawable.ic_launcher_foreground) //mipmap 사용시 Oreo 이상에서 시스템 UI 에러남
             val channelName = "매일 알람 채널"
             val description = "매일 정해진 시간에 알람합니다."
             val importance = NotificationManager.IMPORTANCE_HIGH //소리와 알림메시지를 같이 보여줌
             val channel =
                 NotificationChannel("default", channelName, importance)
             channel.description = description
-            notificationManager?.createNotificationChannel(channel)
+            notificationManager.createNotificationChannel(channel)
         }
-        //else builder.setSmallIcon(R.mipmap.ic_launcher) // Oreo 이하에서 mipmap 사용하지 않으면 Couldn't create icon: StatusBarIcon 에러남
 
 
         builder.setAutoCancel(true)
@@ -76,10 +69,8 @@ class AlarmReceiver : BroadcastReceiver() {
         editor.putLong("nextNotifyTime", nextNotifyTime.getTimeInMillis())
         editor.apply()
         val currentDateTime: Date = nextNotifyTime.getTime()
-        val date_text: String =
-            SimpleDateFormat("yyyy년 MM월 dd일 EE요일 a hh시 mm분 ", Locale.getDefault()).format(
-                currentDateTime
-            )
+        val date_text: String = SimpleDateFormat("yyyy년 MM월 dd일 EE요일 a hh시 mm분 ", Locale.getDefault()).format(currentDateTime)
+
         Toast.makeText(
             context.applicationContext,
             "다음 알람은 " + date_text + "으로 알람이 설정되었습니다!",
