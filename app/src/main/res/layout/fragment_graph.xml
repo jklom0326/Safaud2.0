@@ -36,6 +36,7 @@
             android:id="@+id/top_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
             app:menu="@menu/top_navigation_daily">
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

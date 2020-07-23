@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".AlarmMakeActivity">
+        tools:context=".alarm.AlarmMakeFragment">
 
     <TimePicker
             android:id="@+id/timePicker1"
@@ -16,12 +16,13 @@
             android:layout_marginTop="20dp" />
     <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/timePicker1"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="160dp"
-            android:text="@string/get_date" />
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/등록" />
     <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"

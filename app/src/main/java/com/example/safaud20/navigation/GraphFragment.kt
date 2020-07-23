@@ -10,18 +10,25 @@ import com.example.safaud20.R
 import com.example.safaud20.navigation2.DailyFragment
 import com.example.safaud20.navigation2.MonthlyFragment
 import com.example.safaud20.navigation2.WeeklyFragment
-import com.google.android.material.bottomnavigation.BottomNavigationItemView
+import com.github.mikephil.charting.charts.BarChart
+import com.github.mikephil.charting.components.Legend
+import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.data.BarData
+import com.github.mikephil.charting.data.BarDataSet
+import com.github.mikephil.charting.data.BarEntry
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.fragment_graph.*
 
-class GraphFragment : Fragment(),BottomNavigationView.OnNavigationItemSelectedListener{
 
+class GraphFragment : Fragment(),BottomNavigationView.OnNavigationItemSelectedListener{
+    var chart = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        var view = LayoutInflater.from(activity).inflate(R.layout.fragment_graph,container,false)
+        val view = LayoutInflater.from(activity).inflate(R.layout.fragment_graph,container,false)
         return view
         top_navigation.setOnNavigationItemSelectedListener(this)
+//        button = view.findViewById(R.id.add_alram)
+
     }
 
     override fun onNavigationItemSelected(p1: MenuItem): Boolean {

@@ -18,8 +18,9 @@
     <string name="time">시간</string>
     <string name="sleep_times">수면유도</string>
     <string name="awake_times">기상유도</string>
-
+    <string name="empty_not_saved">Word not saved because it is empty.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="get_date">Get Date</string>
+    <string name="등록">등록</string>
 </resources>
