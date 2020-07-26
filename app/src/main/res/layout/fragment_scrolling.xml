@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SleepTest.ScrollingFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        <TextView
+                android:id="@+id/textView"
+                android:layout_width="480dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="19dp"
+                android:background="@color/colorgray"
+                android:text="      한국판 엡워스 졸음 척도\n     (Korean version of Epworth sleepiness scale)"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="25sp"
+                tools:ignore="HardcodedText" />
+
+        <TextView
+                android:id="@+id/textView2"
+                android:layout_width="438dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/kess_itemlist"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+
+        <lib.kingja.switchbutton.SwitchMultiButton
+                android:id="@+id/switchMultiButton1"
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="40dp"
+                app:selectedTab="-1"
+                app:selectedColor="@color/colorgray">
+
+        </lib.kingja.switchbutton.SwitchMultiButton>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+
+        <lib.kingja.switchbutton.SwitchMultiButton
+                android:id="@+id/switchMultiButton2"
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="40dp"
+                app:selectedTab="-1"
+                app:selectedColor="@color/colorgray">
+
+        </lib.kingja.switchbutton.SwitchMultiButton>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+
+        <lib.kingja.switchbutton.SwitchMultiButton
+                android:id="@+id/switchMultiButton3"
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="40dp"
+                app:selectedTab="-1"
+                app:selectedColor="@color/colorgray">
+
+        </lib.kingja.switchbutton.SwitchMultiButton>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+
+        <lib.kingja.switchbutton.SwitchMultiButton
+                android:id="@+id/switchMultiButton4"
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="40dp"
+                app:selectedTab="-1"
+                app:selectedColor="@color/colorgray">
+
+        </lib.kingja.switchbutton.SwitchMultiButton>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+
+        <lib.kingja.switchbutton.SwitchMultiButton
+                android:id="@+id/switchMultiButton5"
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="40dp"
+                app:selectedTab="-1"
+                app:selectedColor="@color/colorgray">
+
+        </lib.kingja.switchbutton.SwitchMultiButton>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+
+        <lib.kingja.switchbutton.SwitchMultiButton
+                android:id="@+id/switchMultiButton6"
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="40dp"
+                app:selectedTab="-1"
+                app:selectedColor="@color/colorgray">
+
+        </lib.kingja.switchbutton.SwitchMultiButton>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+
+        <lib.kingja.switchbutton.SwitchMultiButton
+                android:id="@+id/switchMultiButton7"
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="40dp"
+                app:selectedTab="-1"
+                app:selectedColor="@color/colorgray">
+
+        </lib.kingja.switchbutton.SwitchMultiButton>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+
+        <lib.kingja.switchbutton.SwitchMultiButton
+                android:id="@+id/switchMultiButton"
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="40dp"
+                app:selectedTab="-1"
+                app:selectedColor="@color/colorgray">
+
+        </lib.kingja.switchbutton.SwitchMultiButton>
+
+        <Button
+                android:id="@+id/subButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginBottom="128dp"
+                android:text="@string/제출">
+
+        </Button>
+
+        <TextView
+                android:id="@+id/scoreboard"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="40dp">
+        </TextView>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

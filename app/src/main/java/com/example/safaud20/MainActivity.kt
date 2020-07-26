@@ -1,34 +1,17 @@
 package com.example.safaud20
 
-import android.app.Activity
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.Toast
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
+import com.example.safaud20.SleepTest.ScrollingFragment
 import com.example.safaud20.alarm.AlarmMakeFragment
 import com.example.safaud20.alarm.TimeViewModel
-import com.example.safaud20.alarm.alramData
 import com.example.safaud20.navigation.AlarmFragment
 import com.example.safaud20.navigation.DetailViewFragment
 import com.example.safaud20.navigation.GraphFragment
 import com.example.safaud20.navigation.GridFragment
-import com.github.mikephil.charting.components.Legend
-import com.github.mikephil.charting.components.XAxis
-import com.github.mikephil.charting.data.BarData
-import com.github.mikephil.charting.data.BarDataSet
-import com.github.mikephil.charting.data.BarEntry
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_alarm_make.*
-import kotlinx.android.synthetic.main.fragment_daily.*
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener{
 
@@ -40,12 +23,12 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     when(p0.itemId){
         R.id.home ->{
-            var detailViewFragment = DetailViewFragment()
+            val detailViewFragment = DetailViewFragment()
             supportFragmentManager.beginTransaction().replace(R.id.main_content,detailViewFragment).commit()
             return true
         }
         R.id.sleep_test ->{
-            var gridFragment = GridFragment()
+            val gridFragment = GridFragment()
             supportFragmentManager.beginTransaction().replace(R.id.main_content,gridFragment).commit()
             return true
         }
@@ -54,7 +37,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             return true
         }
         R.id.statistics ->{
-            var graphFragment = GraphFragment()
+            val graphFragment = GraphFragment()
             supportFragmentManager.beginTransaction().replace(R.id.main_content,graphFragment).commit()
             return true
         }
@@ -101,8 +84,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     fun setAlarm(name : String){
 //        var tran = supportFragmentManager.beginTransaction()
 
-        var alarmfragment= AlarmFragment()
-        var alarmmakefragment= AlarmMakeFragment()
+        val alarmfragment= AlarmFragment()
+        val alarmmakefragment= AlarmMakeFragment()
 
         when(name){
             "default"->{
@@ -111,6 +94,16 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             "make"->{
                 supportFragmentManager.beginTransaction().replace(R.id.main_content,alarmmakefragment).commit()
                 supportFragmentManager.beginTransaction().addToBackStack(null)
+            }
+        }
+
+    }
+    fun sleepTest (name: String) {
+        val sleepTest1 = ScrollingFragment()
+
+        when(name){
+            "KESS" ->{
+                supportFragmentManager.beginTransaction().replace(R.id.main_content,sleepTest1).commit()
             }
         }
 

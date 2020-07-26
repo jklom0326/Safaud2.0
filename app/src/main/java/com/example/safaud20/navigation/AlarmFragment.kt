@@ -28,11 +28,11 @@ class AlarmFragment : Fragment() {
     val list_time = ArrayList<String>(ArrayList())
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        var view = LayoutInflater.from(activity).inflate(R.layout.fragment_alarm, container, false)
+        val view = LayoutInflater.from(activity).inflate(R.layout.fragment_alarm, container, false)
 
         button = view.findViewById(R.id.add_alram)
         button?.setOnClickListener {
-            var main_activity = activity as MainActivity
+            val main_activity = activity as MainActivity
             main_activity.setAlarm("make")
         }
 
@@ -45,7 +45,7 @@ class AlarmFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var recyclerView = view?.findViewById<RecyclerView>(R.id.recyclerview_list)
+        val recyclerView = view?.findViewById<RecyclerView>(R.id.recyclerview_list)
         val adapter = ListAdapter(context!!)
         recyclerView?.adapter = adapter
         recyclerView?.layoutManager=LinearLayoutManager(this.context)
