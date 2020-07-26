@@ -31,30 +31,30 @@ class LoginActivity : AppCompatActivity() {
             googleLogin()
         }
 
-        var gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(this,gso)
     }
     fun googleLogin(){
-        var signinIntent= googleSignInClient?.signInIntent
+        val signinIntent= googleSignInClient?.signInIntent
         startActivityForResult(signinIntent,GOOGLE_LOGIN_CODE)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == GOOGLE_LOGIN_CODE){
-            var result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
-            if (result.isSuccess){
-                var account = result.signInAccount
+            val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
+            if (result?.isSuccess!!){
+                val account = result.signInAccount
                 //두번째단계
                 firebaseAuthWithGoogle(account)
             }
         }
     }
     fun firebaseAuthWithGoogle(account: GoogleSignInAccount?){
-        var  credential =GoogleAuthProvider.getCredential(account?.idToken,null)
+        val  credential =GoogleAuthProvider.getCredential(account?.idToken,null)
         auth?.signInWithCredential(credential)
             ?.addOnCompleteListener {
                     task ->

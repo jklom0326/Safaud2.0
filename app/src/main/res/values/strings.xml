@@ -28,5 +28,11 @@
     <string name="kess_itemlist">단순한 피곤함 과는 다르게 다음의 상황에서 얼마나 깜박 졸거나 혹은 잠들어 버릴 것 같습니까? 이것은 최근의 일상생활을 참고하시기
     바랍니다. 비록 최근에 이런 상항에 처하지 않았다 하더라도, 그 상황에서 얼마나 영향을 받을지 생각해 보십시오. 각 상황에서 가장 적절한 상황을 선택하시기 바랍니다.</string>
     <string name="제출">제출</string>
+    <array name="switch_tabs">
+        <item>전혀</item>
+        <item>적음</item>
+        <item>상당히</item>
+        <item>매우 많이</item>
+    </array>
 
 </resources>

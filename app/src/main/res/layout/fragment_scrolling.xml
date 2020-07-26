@@ -27,27 +27,30 @@
 
         <TextView
                 android:id="@+id/textView2"
-                android:layout_width="438dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
                 android:text="@string/kess_itemlist"
                 android:textSize="18sp"
                 tools:ignore="HardcodedText" />
 
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="40dp"
                 android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
-                android:textSize="28sp"
+                android:textSize="20sp"
                 tools:ignore="HardcodedText" />
 
         <lib.kingja.switchbutton.SwitchMultiButton
+
                 android:id="@+id/switchMultiButton1"
+                app:switchTabs="@array/switch_tabs"
+                app:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
@@ -59,16 +62,18 @@
 
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="40dp"
-                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
-                android:textSize="28sp"
+                android:text="TV를 볼 때"
+                android:textSize="20sp"
                 tools:ignore="HardcodedText" />
 
         <lib.kingja.switchbutton.SwitchMultiButton
                 android:id="@+id/switchMultiButton2"
+                app:switchTabs="@array/switch_tabs"
+                app:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
@@ -79,16 +84,18 @@
         </lib.kingja.switchbutton.SwitchMultiButton>
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="40dp"
-                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
-                android:textSize="28sp"
+                android:text="공공장소(모임,극장 등)에서 가만히 앉아 있을 때"
+                android:textSize="20sp"
                 tools:ignore="HardcodedText" />
 
         <lib.kingja.switchbutton.SwitchMultiButton
                 android:id="@+id/switchMultiButton3"
+                app:switchTabs="@array/switch_tabs"
+                app:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
@@ -99,16 +106,18 @@
         </lib.kingja.switchbutton.SwitchMultiButton>
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="40dp"
-                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
-                android:textSize="28sp"
+                android:text="정차 없이 1시간 동안 운행 중인 차(자동차,버스,열차)에 승객으로 앉아 있을 때"
+                android:textSize="20sp"
                 tools:ignore="HardcodedText" />
 
         <lib.kingja.switchbutton.SwitchMultiButton
                 android:id="@+id/switchMultiButton4"
+                app:switchTabs="@array/switch_tabs"
+                app:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
@@ -119,16 +128,18 @@
         </lib.kingja.switchbutton.SwitchMultiButton>
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="40dp"
-                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
-                android:textSize="28sp"
+                android:text="오후에 주위상황이 허락되어 쉬려고 누워 있을 때"
+                android:textSize="20sp"
                 tools:ignore="HardcodedText" />
 
         <lib.kingja.switchbutton.SwitchMultiButton
                 android:id="@+id/switchMultiButton5"
+                app:switchTabs="@array/switch_tabs"
+                app:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
@@ -139,16 +150,18 @@
         </lib.kingja.switchbutton.SwitchMultiButton>
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="40dp"
-                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
-                android:textSize="28sp"
+                android:text="앉아서 상대방과 이야기할 때"
+                android:textSize="20sp"
                 tools:ignore="HardcodedText" />
 
         <lib.kingja.switchbutton.SwitchMultiButton
                 android:id="@+id/switchMultiButton6"
+                app:switchTabs="@array/switch_tabs"
+                app:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
@@ -159,16 +172,18 @@
         </lib.kingja.switchbutton.SwitchMultiButton>
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="40dp"
-                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
-                android:textSize="28sp"
+                android:text="반주를 곁들이지 않은 점심식사 후 조용히 앉아 있을 때"
+                android:textSize="20sp"
                 tools:ignore="HardcodedText" />
 
         <lib.kingja.switchbutton.SwitchMultiButton
                 android:id="@+id/switchMultiButton7"
+                app:switchTabs="@array/switch_tabs"
+                app:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
@@ -179,16 +194,18 @@
         </lib.kingja.switchbutton.SwitchMultiButton>
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="40dp"
-                android:text="앉아서 책(신문,잡지,서류 등)을 읽을때"
-                android:textSize="28sp"
+                android:text="교통 혼잡으로 몇 분 동안 멈춰진 차안에서"
+                android:textSize="20sp"
                 tools:ignore="HardcodedText" />
 
         <lib.kingja.switchbutton.SwitchMultiButton
-                android:id="@+id/switchMultiButton"
+                android:id="@+id/switchMultiButton8"
+                app:switchTabs="@array/switch_tabs"
+                app:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
@@ -203,6 +220,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginStart="38dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginBottom="128dp"
                 android:text="@string/제출">
 
