@@ -10,6 +10,9 @@ import com.example.safaud20.navigation.AlarmFragment
 import com.example.safaud20.navigation.DetailViewFragment
 import com.example.safaud20.navigation.GraphFragment
 import com.example.safaud20.navigation.GridFragment
+import com.example.safaud20.navigation2.DailyFragment
+import com.example.safaud20.navigation2.MonthlyFragment
+import com.example.safaud20.navigation2.WeeklyFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -41,6 +44,26 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             supportFragmentManager.beginTransaction().replace(R.id.main_content,graphFragment).commit()
             return true
         }
+        R.id.daily -> {
+            var dailyFragment = DailyFragment()
+            supportFragmentManager.beginTransaction().apply {
+                addToBackStack(null)
+                replace(R.id.main_content2, dailyFragment).commit()
+            }
+            return true
+        }
+
+        R.id.weekly -> {
+            var WeeklyFragment = WeeklyFragment()
+            supportFragmentManager.beginTransaction().replace(R.id.main_content2, WeeklyFragment).commit()
+            return true
+        }
+
+        R.id.monthly -> {
+            var MonthlyFragment = MonthlyFragment()
+            supportFragmentManager.beginTransaction().replace(R.id.main_content2, MonthlyFragment).commit()
+            return true
+        }
     }
         return false
     }
@@ -51,33 +74,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         //디폴트 화면 띄우는거
         bottom_navigation.selectedItemId = R.id.home
 
-//        val recyclerView = findViewById<RecyclerView>(R.id.recyclerview_list)
-//        val adapter = com.example.safaud20.alarm.ListAdapter(this)
-//        recyclerView.adapter = adapter
-//        recyclerView?.layoutManager=LinearLayoutManager(this)
-//
-//        TimeViewModel = ViewModelProvider(this).get(TimeViewModel::class.java)
-//        TimeViewModel.alllist.observe(this, Observer { alramData ->
-//            alramData?.let { adapter.settimes(it) }
-//        })
-//        val fab = findViewById<Button>(R.id.button1)
-//        fab.setOnClickListener{
-//            val intent = Intent(this@MainActivity, AlarmFragment::class.java)
-//            startActivityForResult(intent,newWordActivityRequestCode)
-//        }
     }
-
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//        if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
-//            data?.getStringExtra(AlarmMakeFragment.EXTRA_REPLY)?.let {
-//                val word = alramData(it)
-//                TimeViewModel.insert(word)
-//            }
-//        }else{
-//            Toast.makeText(applicationContext,R.string.empty_not_saved,Toast.LENGTH_LONG).show()
-//        }
-//    }
 
 
 
@@ -108,6 +105,16 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         }
 
     }
+
+    fun dateSelected(name: String){
+        val dailyseleced = DailyFragment()
+        when(name){
+            "dailyseleced" ->{
+                supportFragmentManager.beginTransaction().replace(R.id.main_content2,dailyseleced).commit()
+            }
+        }
+    }
+
 
 
 }

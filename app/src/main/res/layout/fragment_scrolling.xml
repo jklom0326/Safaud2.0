@@ -20,9 +20,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="19dp"
                 android:background="@color/colorgray"
-                android:text="      한국판 엡워스 졸음 척도\n     (Korean version of Epworth sleepiness scale)"
+                android:text=" 한국판 엡워스 졸음 척도"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="25sp"
+                android:textSize="40sp"
                 tools:ignore="HardcodedText" />
 
         <TextView
