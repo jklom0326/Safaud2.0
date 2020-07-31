@@ -66,18 +66,18 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 //            startActivityForResult(intent,newWordActivityRequestCode)
 //        }
     }
-
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//        if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
-//            data?.getStringExtra(AlarmMakeFragment.EXTRA_REPLY)?.let {
-//                val word = alramData(it)
-//                TimeViewModel.insert(word)
-//            }
-//        }else{
-//            Toast.makeText(applicationContext,R.string.empty_not_saved,Toast.LENGTH_LONG).show()
-//        }
-//    }
+// 알람데이터설정
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
+            data?.getStringExtra(AlarmMakeFragment.EXTRA_REPLY)?.let {
+                val word = alramData(it)
+                TimeViewModel.insert(word)
+            }
+        }else{
+            Toast.makeText(applicationContext,R.string.empty_not_saved,Toast.LENGTH_LONG).show()
+        }
+    }
 
 
 
