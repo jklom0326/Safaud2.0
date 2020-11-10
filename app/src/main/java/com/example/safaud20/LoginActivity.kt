@@ -3,6 +3,7 @@ package com.example.safaud20
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import com.google.android.gms.auth.api.Auth
@@ -16,15 +17,16 @@ import com.google.firebase.auth.GoogleAuthProvider
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
-    var auth : FirebaseAuth? = null
+    lateinit var auth : FirebaseAuth
     var googleSignInClient : GoogleSignInClient? = null
     var GOOGLE_LOGIN_CODE = 9001
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         auth = FirebaseAuth.getInstance()
+
         email_login_button.setOnClickListener{ // 로그인버튼 눌렀을때
-            signinAndSignup()
+            emailLogin()
         }
         google_sign_in_button.setOnClickListener{
             //첫번째 단계
@@ -55,8 +57,8 @@ class LoginActivity : AppCompatActivity() {
     }
     fun firebaseAuthWithGoogle(account: GoogleSignInAccount?){
         val  credential =GoogleAuthProvider.getCredential(account?.idToken,null)
-        auth?.signInWithCredential(credential)
-            ?.addOnCompleteListener {
+        auth.signInWithCredential(credential)
+            .addOnCompleteListener {
                     task ->
                 if(task.isSuccessful){
                     //login
@@ -67,24 +69,37 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
     }
+
     fun signinAndSignup() {
-        auth?.createUserWithEmailAndPassword(
-            email_edittext.text.toString(),
-            password_edittext.text.toString()
-        )
-            ?.addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    moveMainPage(task.result?.user)
-                } else if (task.exception?.message.isNullOrEmpty()) {
-                    Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()
-                } else {
-                    signinEmail()
-                }
+        auth.createUserWithEmailAndPassword(email_edittext.text.toString(),
+            password_edittext.text.toString()).addOnCompleteListener{ task ->
+            if (task.isSuccessful) {
+                moveMainPage(task.result?.user)
+            }else if (task.exception?.message.isNullOrEmpty()) {
+                //회원가입 에러가 발생했을 경우
+                Toast.makeText(this,
+                    task.exception!!.message, Toast.LENGTH_SHORT).show()
+            }
+            else {
+                signinEmail()
             }
         }
+    }
+
+    fun emailLogin() {
+
+        if (email_edittext.text.toString().isNullOrEmpty() || password_edittext.text.toString().isNullOrEmpty()) {
+            Toast.makeText(this, getString(R.string.signout_fail_null), Toast.LENGTH_SHORT).show()
+
+        } else {
+            signinAndSignup()
+
+        }
+    }
+
         fun signinEmail(){
-            auth?.createUserWithEmailAndPassword(email_edittext.text.toString(),password_edittext.text.toString())
-                ?.addOnCompleteListener {
+            auth.createUserWithEmailAndPassword(email_edittext.text.toString(),password_edittext.text.toString())
+                .addOnCompleteListener {
             task ->
             if(task.isSuccessful){
                 //login
